@@ -18,13 +18,13 @@
             background-color: #f8fafd;
         }
 
-        /* Top Bar Accent */
+        /* Línea superior de acento con gradiente */
         .top-accent {
             height: 6px;
             background: linear-gradient(90deg, #072953 0%, #239a3b 100%);
         }
 
-        /* Header / Navigation Style Layout */
+        /* Encabezado / Logo */
         header {
             background-color: #ffffff;
             padding: 20px 5%;
@@ -40,7 +40,6 @@
             gap: 12px;
         }
 
-        /* Custom SVG Icon for Logo resembling the image's interlocking hands/people */
         .logo-icon {
             width: 45px;
             height: 45px;
@@ -73,12 +72,10 @@
             letter-spacing: 1px;
         }
 
-        /* Hero Section */
+        /* Sección Principal / Hero */
         .hero {
             background: linear-gradient(135deg, #ffffff 0%, #edf3f9 100%);
             padding: 60px 5%;
-            position: relative;
-            overflow: hidden;
             border-bottom: 1px solid #e1e8f0;
         }
 
@@ -146,6 +143,7 @@
             color: #8ce68c;
         }
 
+        /* Botón de Acción Principal */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -172,13 +170,12 @@
             fill: currentColor;
         }
 
-        /* Hero Right (Visual Reference) */
+        /* Columna Visual Derecha */
         .hero-visual {
             display: table-cell;
             width: 40%;
             vertical-align: middle;
             text-align: center;
-            position: relative;
         }
 
         .circle-seal {
@@ -218,7 +215,7 @@
             text-transform: uppercase;
         }
 
-        /* Card Visual */
+        /* Tarjeta de Referencia de Propiedad */
         .blueprint-card {
             background: white;
             border-radius: 12px;
@@ -262,9 +259,9 @@
             text-align: center;
         }
 
-        /* Features Section */
+        /* Beneficios y Características */
         .features {
-            padding: 70px 5%;
+            padding: 60px 5% 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -324,7 +321,6 @@
         .f-blue { background-color: #e6eef7; color: #072953; }
         .f-green { background-color: #e6f4ea; color: #239a3b; }
         .f-orange { background-color: #fef3d6; color: #b06000; }
-        .f-teal { background-color: #e4f7f6; color: #007a78; }
 
         .feature-card h3 {
             font-size: 16px;
@@ -341,13 +337,120 @@
             line-height: 1.5;
         }
 
-        /* Urgency Banner */
+        /* NUEVA SECCIÓN: CASOS DE EJEMPLO */
+        .cases-section {
+            background-color: #f0f4f8;
+            padding: 60px 5%;
+        }
+
+        .cases-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cases-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+        }
+
+        .case-card {
+            display: table-cell;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            vertical-align: top;
+        }
+
+        .case-tag {
+            font-size: 11px;
+            font-weight: 700;
+            background-color: #072953;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .case-card h4 {
+            color: #072953;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .case-card p {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 12px;
+        }
+
+        .case-solution {
+            background-color: #f4faf5;
+            border-left: 3px solid #239a3b;
+            padding: 10px 12px;
+            font-size: 13.5px;
+            color: #137333;
+            font-weight: 500;
+        }
+
+        /* NUEVA SECCIÓN: CONSIDERACIONES RECOMENDADAS */
+        .considerations-section {
+            padding: 60px 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .considerations-box {
+            background-color: #ffffff;
+            border: 1px solid #d0daf0;
+            border-radius: 8px;
+            padding: 35px;
+            box-shadow: 0 6px 20px rgba(7, 41, 83, 0.03);
+        }
+
+        .considerations-box h3 {
+            color: #072953;
+            margin-bottom: 20px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .considerations-list {
+            list-style: none;
+        }
+
+        .considerations-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #444444;
+        }
+
+        .considerations-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #239a3b;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Banner de Urgencia */
         .urgency-banner {
             background-color: #ffffff;
             border: 2px solid #e1e8f0;
             border-radius: 8px;
             max-width: 800px;
-            margin: 0 auto 60px;
+            margin: 20px auto 60px;
             padding: 24px;
             display: table;
             width: 100%;
@@ -373,7 +476,7 @@
             color: #239a3b;
         }
 
-        /* Info Section */
+        /* Barra de Contacto */
         .info-bar {
             background-color: #072953;
             color: #ffffff;
@@ -430,13 +533,13 @@
             text-decoration: none;
         }
 
-        /* Subfooter Accent */
+        /* Footer Inferior */
         .sub-footer {
             background-color: #051c38;
             color: #a0b2c6;
             text-align: center;
-            padding: 15px 20px;
-            font-size: 13px;
+            padding: 20px;
+            font-size: 14px;
             font-weight: 500;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -446,9 +549,9 @@
             font-weight: 600;
         }
 
-        /* Responsive utilities fallback */
+        /* Adaptabilidad Móvil (Responsive) */
         @media (max-width: 768px) {
-            .hero-content, .hero-visual, .features-grid, .feature-card, .info-col {
+            .hero-content, .hero-visual, .features-grid, .feature-card, .cases-grid, .case-card, .info-col {
                 display: block !important;
                 width: 100% !important;
                 padding-right: 0 !important;
@@ -473,10 +576,8 @@
 
     <div class="top-accent"></div>
 
-    <!-- HEADER / LOGO BAR -->
     <header>
         <div class="logo-container">
-            <!-- Interlocking figures representing Conciliation/Agreement -->
             <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="22" cy="18" r="6" fill="#072953"/>
                 <circle cx="42" cy="18" r="6" fill="#239a3b"/>
@@ -493,13 +594,11 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-container">
             
-            <!-- Left Side Copy -->
             <div class="hero-content">
-                <span class="hero-badge">Soluciones Legales de Forma Pacífica</span>
+                <span class="hero-badge">Soluciones Legales Extrajudiciales</span>
                 <h1>RECTIFICACIÓN <br><span>DE ÁREAS</span></h1>
                 
                 <p class="hero-p">
@@ -518,7 +617,6 @@
                 </a>
             </div>
 
-            <!-- Right Side Visual elements matching the flyer -->
             <div class="hero-visual">
                 <div class="circle-seal">
                     <svg viewBox="0 0 24 24">
@@ -546,13 +644,10 @@
         </div>
     </section>
 
-    <!-- FEATURES / BENEFITS SECTION -->
     <section class="features">
-        <h2 class="section-title">Protege tu Patrimonio con Soluciones Efectivas</h2>
+        <h2 class="section-title">Beneficios de la Conciliación</h2>
         
         <div class="features-grid">
-            
-            <!-- Benefit 1 -->
             <div class="feature-card">
                 <div class="feature-icon-box f-blue">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -561,10 +656,9 @@
                     </svg>
                 </div>
                 <h3>Acuerdos Válidos y Legales</h3>
-                <p>Logramos acuerdos con total valor legal (equivalente a una sentencia judicial) para la rectificación de las áreas y linderos de tu inmueble.</p>
+                <p>Logramos acuerdos con total valor legal (equivalente a una sentencia de juez) para la rectificación de áreas y linderos de tu inmueble.</p>
             </div>
 
-            <!-- Benefit 2 -->
             <div class="feature-card">
                 <div class="feature-icon-box f-green">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -573,10 +667,9 @@
                     </svg>
                 </div>
                 <h3>Ahorra Tiempo y Dinero</h3>
-                <p>Evita por completo los procesos judiciales largos, costosos y estresantes. Resolvemos los desacuerdos en un ambiente privado y ágil.</p>
+                <p>Evita por completo los procesos judiciales largos, costosos y estresantes. Resolvemos los desacuerdos en un ambiente pacífico y ágil.</p>
             </div>
 
-            <!-- Benefit 3 -->
             <div class="feature-card">
                 <div class="feature-icon-box f-orange">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -587,11 +680,64 @@
                 <h3>Seguridad Jurídica</h3>
                 <p>Obtén total tranquilidad y certeza sobre las medidas reales y definitivas de tu propiedad ante Registros Públicos.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- URGENCY CALLOUT -->
+    <section class="cases-section">
+        <div class="cases-container">
+            <h2 class="section-title">Casos Frecuentes que Resolvemos</h2>
+            <div class="cases-grid">
+                
+                <div class="case-card">
+                    <span class="case-tag">Caso 1</span>
+                    <h4>Discrepancia con SUNARP</h4>
+                    <p>El propietario detecta que el área física real de su terreno mide 120 m², pero en su partida registral figura erróneamente con 112 m².</p>
+                    <div class="case-solution">
+                        <strong>Solución:</strong> Se convoca a los colindantes a conciliar, firmando un Acta con valor legal que permite inscribir el área real directamente en Registros Públicos.
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <span class="case-tag">Caso 2</span>
+                    <h4>Compraventa Paralizada</h4>
+                    <p>Un banco rechaza el crédito hipotecario de un comprador porque los planos actuales del inmueble no coinciden con la escritura antigua.</p>
+                    <div class="case-solution">
+                        <strong>Solución:</strong> Mediante un proceso de conciliación rápido, se formaliza la rectificación métrica en días, salvando la venta de la propiedad sin ir a juicio.
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <span class="case-tag">Caso 3</span>
+                    <h4>Superposición de Linderos</h4>
+                    <p>Dos vecinos tienen dudas sobre la ubicación exacta de la pared divisoria (linderos) tras una remodelación.</p>
+                    <div class="case-solution">
+                        <strong>Solución:</strong> Un perito delimita las áreas y, a través del diálogo en nuestro centro, los vecinos firman un acuerdo definitivo mutuo y amigable.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="considerations-section">
+        <div class="considerations-box">
+            <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#072953" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Consideraciones Importantes antes de Iniciar
+            </h3>
+            <ul class="considerations-list">
+                <li><strong>Informe Técnico Técnico-Catastral:</strong> Es altamente recomendable contar con el levantamiento topográfico o planos visados por un ingeniero geógrafo o verificador SUNARP antes de la audiencia.</li>
+                <li><strong>Disposición de los Vecinos:</strong> La vía conciliatoria funciona cuando los propietarios colindantes están dispuestos a firmar de mutuo acuerdo. Si hay oposición absoluta, se tendrá que derivar a la vía judicial.</li>
+                <li><strong>Efecto de Sentencia:</strong> El Acta de Conciliación con Acuerdo Total es un título ejecutivo. Esto significa que lo acordado es de obligatorio cumplimiento inmediato para ambas partes.</li>
+                <li><strong>Aptitud del Inmueble:</strong> Este procedimiento aplica tanto para predios urbanos como rurales que necesiten saneamiento de medidas perimétricas.</li>
+            </ul>
+        </div>
+    </section>
+
     <div style="padding: 0 5%;">
         <div class="urgency-banner">
             <div class="urgency-icon">
@@ -603,16 +749,13 @@
                 </svg>
             </div>
             <div class="urgency-text">
-                ¡CONCILIA HOY Y EVITA <span>COMPLICACIONES MAÑANA!</span>
+                ¡CONCILIA HOY Y EVITA COMPLICACIONES MAÑANA!
             </div>
         </div>
     </div>
 
-    <!-- CONTACT INFO BAR -->
     <section class="info-bar">
         <div class="info-container">
-            
-            <!-- Phone -->
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
@@ -627,7 +770,6 @@
                 </div>
             </div>
 
-            <!-- Address -->
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
@@ -643,7 +785,6 @@
                 </div>
             </div>
 
-            <!-- Reference -->
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
@@ -653,18 +794,16 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="info-label">Referencia de Ubicación</div>
+                        <div class="info-label">Ubicación de Referencia</div>
                         <div class="info-val" style="font-size: 14px; color: #e6f4ea;">A 5 cuadras de la Plaza de la Bandera</div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- FOOTER ACCENT -->
     <footer class="sub-footer">
-        CONCILIACIÓN EFECTIVA, <span>ACUERDOS QUE GENERAN SOLUCIONES</span> • #RectificaciónDeÁreas #PuebloLibre
+        CONCILIACIÓN EFECTIVA, <span>ACUERDOS QUE GENERAN SOLUCIONES</span> • Centro de Conciliación Pueblo Libre
     </footer>
 
 </body>
