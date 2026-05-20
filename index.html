@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Conciliación Pueblo Libre - Rectificación de Áreas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8fafd;
+        }
+
+        /* Top Bar Accent */
+        .top-accent {
+            height: 6px;
+            background: linear-gradient(90deg, #072953 0%, #239a3b 100%);
+        }
+
+        /* Header / Navigation Style Layout */
+        header {
+            background-color: #ffffff;
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Custom SVG Icon for Logo resembling the image's interlocking hands/people */
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #239a3b;
+            font-weight: 700;
+        }
+
+        .brand-main {
+            font-size: 20px;
+            font-weight: 800;
+            color: #072953;
+            line-height: 1.1;
+        }
+
+        .brand-loc {
+            font-size: 14px;
+            font-weight: 700;
+            color: #239a3b;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #edf3f9 100%);
+            padding: 60px 5%;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #e1e8f0;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: table;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: table-cell;
+            width: 60%;
+            vertical-align: middle;
+            padding-right: 40px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: #e6f4ea;
+            color: #137333;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #072953;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #239a3b;
+            display: block;
+            font-size: 46px;
+        }
+
+        .hero-p {
+            font-size: 17px;
+            color: #555555;
+            margin-bottom: 30px;
+            max-width: 580px;
+        }
+
+        .hero-cta-box {
+            background-color: #072953;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border-left: 5px solid #239a3b;
+            box-shadow: 0 4px 15px rgba(7, 41, 83, 0.15);
+        }
+
+        .hero-cta-box span {
+            color: #8ce68c;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 32px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: currentColor;
+        }
+
+        /* Hero Right (Visual Reference) */
+        .hero-visual {
+            display: table-cell;
+            width: 40%;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+        }
+
+        .circle-seal {
+            width: 140px;
+            height: 140px;
+            background-color: #072953;
+            border: 4px solid #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .circle-seal svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .circle-seal .seal-txt1 {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .circle-seal .seal-txt2 {
+            font-size: 12px;
+            color: #8ce68c;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* Card Visual */
+        .blueprint-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid #e1e8f0;
+            text-align: left;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .blueprint-header {
+            font-weight: 700;
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .area-display {
+            font-size: 32px;
+            font-weight: 800;
+            color: #072953;
+            border: 2px dashed #239a3b;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            background-color: #f4faf5;
+            margin-bottom: 15px;
+        }
+
+        .extrajudicial-badge {
+            background-color: #239a3b;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 70px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #072953;
+            font-weight: 700;
+            margin-bottom: 45px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #239a3b;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+        }
+
+        .feature-card {
+            display: table-cell;
+            background: #ffffff;
+            padding: 30px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-bottom: 4px solid #e1e8f0;
+            vertical-align: top;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-bottom-color: #239a3b;
+        }
+
+        .feature-icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .f-blue { background-color: #e6eef7; color: #072953; }
+        .f-green { background-color: #e6f4ea; color: #239a3b; }
+        .f-orange { background-color: #fef3d6; color: #b06000; }
+        .f-teal { background-color: #e4f7f6; color: #007a78; }
+
+        .feature-card h3 {
+            font-size: 16px;
+            color: #072953;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background-color: #ffffff;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 24px;
+            display: table;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .urgency-icon {
+            display: table-cell;
+            width: 70px;
+            vertical-align: middle;
+            color: #239a3b;
+        }
+
+        .urgency-text {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: 700;
+            color: #072953;
+        }
+
+        .urgency-text span {
+            color: #239a3b;
+        }
+
+        /* Info Section */
+        .info-bar {
+            background-color: #072953;
+            color: #ffffff;
+            padding: 40px 5%;
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: table;
+            width: 100%;
+        }
+
+        .info-col {
+            display: table-cell;
+            width: 33.333%;
+            vertical-align: middle;
+            padding: 0 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-icon-circle {
+            width: 54px;
+            height: 54px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8ce68c;
+            flex-shrink: 0;
+        }
+
+        .info-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #a0b2c6;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .info-val {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .info-val a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Subfooter Accent */
+        .sub-footer {
+            background-color: #051c38;
+            color: #a0b2c6;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .sub-footer span {
+            color: #8ce68c;
+            font-weight: 600;
+        }
+
+        /* Responsive utilities fallback */
+        @media (max-width: 768px) {
+            .hero-content, .hero-visual, .features-grid, .feature-card, .info-col {
+                display: block !important;
+                width: 100% !important;
+                padding-right: 0 !important;
+                margin-bottom: 30px;
+            }
+            .urgency-banner {
+                display: block !important;
+                text-align: center;
+            }
+            .urgency-icon {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 15px;
+            }
+            .info-col {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-accent"></div>
+
+    <!-- HEADER / LOGO BAR -->
+    <header>
+        <div class="logo-container">
+            <!-- Interlocking figures representing Conciliation/Agreement -->
+            <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22" cy="18" r="6" fill="#072953"/>
+                <circle cx="42" cy="18" r="6" fill="#239a3b"/>
+                <path d="M12 44C12 34 20 32 22 32C24 32 30 36 32 38C34 36 40 32 42 32C44 32 52 34 52 44V50H12V44Z" fill="#072953" opacity="0.15"/>
+                <path d="M14 46C14 38.5 19.5 35 24 35C26.5 35 30.5 37.5 32 39" stroke="#072953" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 46C50 38.5 44.5 35 40 35C37.5 35 33.5 37.5 32 39" stroke="#239a3b" stroke-width="4" stroke-linecap="round"/>
+                <path d="M26 44H38" stroke="#239a3b" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text">
+                <span class="brand-sub">Centro de</span>
+                <span class="brand-main">CONCILIACIÓN</span>
+                <span class="brand-loc">PUEBLO LIBRE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            
+            <!-- Left Side Copy -->
+            <div class="hero-content">
+                <span class="hero-badge">Soluciones Legales de Forma Pacífica</span>
+                <h1>RECTIFICACIÓN <br><span>DE ÁREAS</span></h1>
+                
+                <p class="hero-p">
+                    ¿Necesitas corregir o regularizar las medidas de tu propiedad? Te ayudamos a corregir diferencias en las medidas y áreas de tu inmueble de manera rápida, segura y sin juicios largos.
+                </p>
+
+                <div class="hero-cta-box">
+                    CONCILIAMOS PARA QUE OBTENGAS LA RECTIFICACIÓN DE ÁREAS CON <span>SEGURIDAD JURÍDICA Y RESPALDO LEGAL.</span>
+                </div>
+
+                <a href="https://wa.me/51990145511" class="btn-whatsapp" target="_blank">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.805-9.799.002-2.618-1.013-5.08-2.86-6.93C16.371 2.025 13.91 1.01 11.29 1.01c-5.405 0-9.807 4.403-9.809 9.806-.001 1.516.405 3.01 1.176 4.343l-.995 3.633 3.725-.977zm14.073-8.088c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+                    </svg>
+                    Iniciar Conciliación Aquí
+                </a>
+            </div>
+
+            <!-- Right Side Visual elements matching the flyer -->
+            <div class="hero-visual">
+                <div class="circle-seal">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2zm0 7c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4z"/>
+                    </svg>
+                    <span class="seal-txt1">Tus Derechos</span>
+                    <span class="seal-txt2">Merecen Respuesta</span>
+                </div>
+
+                <div class="blueprint-card">
+                    <div class="blueprint-header">
+                        <span>Plano de Propiedad</span>
+                        <span style="color: #239a3b;">● En Regla</span>
+                    </div>
+                    <div class="area-display">
+                        120.00 m²
+                    </div>
+                    <div class="extrajudicial-badge">
+                        CONCILIACIÓN EXTRAJUDICIAL<br>
+                        <span style="font-weight: 400; font-size: 11px;">Rápida, Segura y con Valor Legal</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURES / BENEFITS SECTION -->
+    <section class="features">
+        <h2 class="section-title">Protege tu Patrimonio con Soluciones Efectivas</h2>
+        
+        <div class="features-grid">
+            
+            <!-- Benefit 1 -->
+            <div class="feature-card">
+                <div class="feature-icon-box f-blue">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Acuerdos Válidos y Legales</h3>
+                <p>Logramos acuerdos con total valor legal (equivalente a una sentencia judicial) para la rectificación de las áreas y linderos de tu inmueble.</p>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="feature-card">
+                <div class="feature-icon-box f-green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Ahorra Tiempo y Dinero</h3>
+                <p>Evita por completo los procesos judiciales largos, costosos y estresantes. Resolvemos los desacuerdos en un ambiente privado y ágil.</p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="feature-card">
+                <div class="feature-icon-box f-orange">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>Seguridad Jurídica</h3>
+                <p>Obtén total tranquilidad y certeza sobre las medidas reales y definitivas de tu propiedad ante Registros Públicos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- URGENCY CALLOUT -->
+    <div style="padding: 0 5%;">
+        <div class="urgency-banner">
+            <div class="urgency-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </div>
+            <div class="urgency-text">
+                ¡CONCILIA HOY Y EVITA <span>COMPLICACIONES MAÑANA!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT INFO BAR -->
+    <section class="info-bar">
+        <div class="info-container">
+            
+            <!-- Phone -->
+            <div class="info-col">
+                <div class="info-item">
+                    <div class="info-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="info-label">Llámanos o escribe</div>
+                        <div class="info-val"><a href="tel:990145511">990145511</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="info-col">
+                <div class="info-item">
+                    <div class="info-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="info-label">Visítanos en</div>
+                        <div class="info-val">Av. Mariano H. Cornejo 1566</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reference -->
+            <div class="info-col">
+                <div class="info-item">
+                    <div class="info-icon-circle">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                            <line x1="4" y1="22" x2="4" y2="15"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="info-label">Referencia de Ubicación</div>
+                        <div class="info-val" style="font-size: 14px; color: #e6f4ea;">A 5 cuadras de la Plaza de la Bandera</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER ACCENT -->
+    <footer class="sub-footer">
+        CONCILIACIÓN EFECTIVA, <span>ACUERDOS QUE GENERAN SOLUCIONES</span> • #RectificaciónDeÁreas #PuebloLibre
+    </footer>
+
+</body>
+</html>
