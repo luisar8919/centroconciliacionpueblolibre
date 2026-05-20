@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de Conciliación Pueblo Libre - Rectificación de Áreas</title>
+    <title>Centro de Conciliación Pueblo Libre - Soluciones Sin Juicios</title>
     <style>
         * {
             box-sizing: border-box;
@@ -18,16 +18,14 @@
             background-color: #f8fafd;
         }
 
-        /* Línea superior de acento con gradiente */
         .top-accent {
             height: 6px;
             background: linear-gradient(90deg, #072953 0%, #239a3b 100%);
         }
 
-        /* Encabezado / Logo */
         header {
             background-color: #ffffff;
-            padding: 20px 5%;
+            padding: 15px 5%;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             display: flex;
             justify-content: space-between;
@@ -38,11 +36,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .logo-icon {
-            width: 45px;
-            height: 45px;
         }
 
         .brand-text {
@@ -65,17 +58,10 @@
             line-height: 1.1;
         }
 
-        .brand-loc {
-            font-size: 14px;
-            font-weight: 700;
-            color: #239a3b;
-            letter-spacing: 1px;
-        }
-
-        /* Sección Principal / Hero */
+        /* HERO: ENFOQUE EN ATENCIÓN (Miedo/Preocupación + Datos Duros) */
         .hero {
             background: linear-gradient(135deg, #ffffff 0%, #edf3f9 100%);
-            padding: 60px 5%;
+            padding: 50px 5%;
             border-bottom: 1px solid #e1e8f0;
         }
 
@@ -88,74 +74,66 @@
 
         .hero-content {
             display: table-cell;
-            width: 60%;
+            width: 55%;
             vertical-align: middle;
             padding-right: 40px;
         }
 
-        .hero-badge {
+        .hero-badge-alert {
             display: inline-block;
-            background-color: #e6f4ea;
-            color: #137333;
+            background-color: #ffebe6;
+            color: #bf2600;
             padding: 6px 16px;
             border-radius: 20px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 38px;
             color: #072953;
             font-weight: 800;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: #239a3b;
-            display: block;
-            font-size: 46px;
+            color: #bf2600; /* Color de alerta para el problema */
         }
 
         .hero-p {
             font-size: 17px;
-            color: #555555;
-            margin-bottom: 30px;
-            max-width: 580px;
-        }
-
-        .hero-cta-box {
-            background-color: #072953;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
+            color: #444444;
             margin-bottom: 25px;
-            border-left: 5px solid #239a3b;
-            box-shadow: 0 4px 15px rgba(7, 41, 83, 0.15);
         }
 
-        .hero-cta-box span {
-            color: #8ce68c;
+        /* DATA DURA (Disparador VSL) */
+        .data-strip {
+            background-color: #f0f4f8;
+            border-left: 4px solid #072953;
+            padding: 12px 18px;
+            border-radius: 4px;
+            font-size: 14.5px;
+            color: #333;
+            margin-bottom: 30px;
         }
 
-        /* Botón de Acción Principal */
+        /* BOTÓN VSL - LLAMADO A LA ACCIÓN */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
             background-color: #25d366;
             color: white;
             text-decoration: none;
-            padding: 15px 32px;
+            padding: 16px 35px;
             font-size: 18px;
             font-weight: 700;
             border-radius: 6px;
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            transition: background-color 0.2s, transform 0.2s;
+            transition: all 0.2s;
         }
 
         .btn-whatsapp:hover {
@@ -166,227 +144,135 @@
         .btn-whatsapp svg {
             width: 24px;
             height: 24px;
-            margin-right: 10px;
+            margin-right: 12px;
             fill: currentColor;
         }
 
-        /* Columna Visual Derecha */
-        .hero-visual {
-            display: table-cell;
-            width: 40%;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .circle-seal {
-            width: 140px;
-            height: 140px;
-            background-color: #072953;
-            border: 4px solid #ffffff;
-            border-radius: 50%;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            padding: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            margin-bottom: 20px;
-        }
-
-        .circle-seal svg {
-            width: 32px;
-            height: 32px;
-            fill: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .circle-seal .seal-txt1 {
-            font-size: 11px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .circle-seal .seal-txt2 {
-            font-size: 12px;
-            color: #8ce68c;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        /* Tarjeta de Referencia de Propiedad */
-        .blueprint-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            border: 1px solid #e1e8f0;
-            text-align: left;
-            max-width: 340px;
+        /* SECCIÓN PAS: AGITACIÓN DEL PROBLEMA */
+        .agitation-section {
+            background-color: #ffffff;
+            padding: 60px 5%;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .blueprint-header {
-            font-weight: 700;
-            font-size: 14px;
-            color: #777;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .area-display {
-            font-size: 32px;
-            font-weight: 800;
+        .vsl-heading {
+            text-align: center;
+            font-size: 26px;
             color: #072953;
-            border: 2px dashed #239a3b;
-            padding: 15px;
-            text-align: center;
-            border-radius: 6px;
-            background-color: #f4faf5;
-            margin-bottom: 15px;
+            font-weight: 800;
+            margin-bottom: 40px;
         }
 
-        .extrajudicial-badge {
-            background-color: #239a3b;
-            color: white;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            text-align: center;
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-        /* Beneficios y Características */
-        .features {
-            padding: 60px 5% 40px;
+        .pain-card {
+            background-color: #fff9f9;
+            border: 1px solid #ffbcbc;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .pain-card h3 {
+            color: #bf2600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* SECCIÓN PAS: LA SOLUCIÓN (Nuestras Especialidades) */
+        .solution-section {
+            background-color: #072953;
+            color: #ffffff;
+            padding: 60px 5%;
+        }
+
+        .solution-section .vsl-heading {
+            color: #ffffff;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            color: #072953;
-            font-weight: 700;
-            margin-bottom: 45px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #239a3b;
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
-
-        .features-grid {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-            border-collapse: separate;
-            border-spacing: 20px 0;
-        }
-
-        .feature-card {
-            display: table-cell;
-            background: #ffffff;
-            padding: 30px 24px;
+        .solution-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border-bottom: 4px solid #e1e8f0;
-            vertical-align: top;
-            transition: transform 0.2s, border-color 0.2s;
+            border-top: 4px solid #239a3b;
         }
 
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-bottom-color: #239a3b;
-        }
-
-        .feature-icon-box {
-            width: 50px;
-            height: 50px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .f-blue { background-color: #e6eef7; color: #072953; }
-        .f-green { background-color: #e6f4ea; color: #239a3b; }
-        .f-orange { background-color: #fef3d6; color: #b06000; }
-
-        .feature-card h3 {
-            font-size: 16px;
-            color: #072953;
-            font-weight: 700;
+        .solution-card h4 {
+            color: #8ce68c;
+            font-size: 17px;
             margin-bottom: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .feature-card p {
+        .solution-card ul {
+            list-style: none;
             font-size: 14px;
-            color: #666666;
-            line-height: 1.5;
+            color: #d0daf0;
         }
 
-        /* NUEVA SECCIÓN: CASOS DE EJEMPLO */
-        .cases-section {
+        .solution-card ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .solution-card ul li::before {
+            content: "✓";
+            color: #239a3b;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* ROMPIENDO OBJECIONES Y PRUEBA SOCIAL */
+        .objections-section {
             background-color: #f0f4f8;
             padding: 60px 5%;
         }
 
-        .cases-container {
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .cases-grid {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-            border-collapse: separate;
-            border-spacing: 20px 0;
-        }
-
         .case-card {
-            display: table-cell;
             background: #ffffff;
             border-radius: 8px;
             padding: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            vertical-align: top;
         }
 
         .case-tag {
             font-size: 11px;
             font-weight: 700;
-            background-color: #072953;
+            background-color: #239a3b;
             color: white;
             padding: 4px 10px;
             border-radius: 4px;
             display: inline-block;
             margin-bottom: 12px;
-            text-transform: uppercase;
         }
 
         .case-card h4 {
             color: #072953;
-            font-size: 17px;
             margin-bottom: 10px;
-        }
-
-        .case-card p {
-            font-size: 14px;
-            color: #555555;
-            margin-bottom: 12px;
         }
 
         .case-solution {
@@ -396,87 +282,47 @@
             font-size: 13.5px;
             color: #137333;
             font-weight: 500;
+            margin-top: 10px;
         }
 
-        /* NUEVA SECCIÓN: CONSIDERACIONES RECOMENDADAS */
-        .considerations-section {
-            padding: 60px 5%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .considerations-box {
+        /* GARANTÍAS Y ESCASEZ (Disparadores VSL) */
+        .guarantee-box {
             background-color: #ffffff;
-            border: 1px solid #d0daf0;
+            border: 2px dashed #239a3b;
             border-radius: 8px;
+            max-width: 850px;
+            margin: 50px auto;
             padding: 35px;
-            box-shadow: 0 6px 20px rgba(7, 41, 83, 0.03);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02);
         }
 
-        .considerations-box h3 {
+        .guarantee-box h3 {
             color: #072953;
-            margin-bottom: 20px;
-            font-size: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .considerations-list {
+        .guarantee-list {
             list-style: none;
-        }
-
-        .considerations-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 15px;
             font-size: 15px;
             color: #444444;
         }
 
-        .considerations-list li::before {
-            content: "✓";
+        .guarantee-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guarantee-list li::before {
+            content: "🛡️";
             position: absolute;
             left: 0;
-            top: 0;
-            color: #239a3b;
-            font-weight: bold;
-            font-size: 16px;
         }
 
-        /* Banner de Urgencia */
-        .urgency-banner {
-            background-color: #ffffff;
-            border: 2px solid #e1e8f0;
-            border-radius: 8px;
-            max-width: 800px;
-            margin: 20px auto 60px;
-            padding: 24px;
-            display: table;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-        }
-
-        .urgency-icon {
-            display: table-cell;
-            width: 70px;
-            vertical-align: middle;
-            color: #239a3b;
-        }
-
-        .urgency-text {
-            display: table-cell;
-            vertical-align: middle;
-            font-size: 20px;
-            font-weight: 700;
-            color: #072953;
-        }
-
-        .urgency-text span {
-            color: #239a3b;
-        }
-
-        /* Barra de Contacto */
+        /* INFO BAR & FOOTER */
         .info-bar {
             background-color: #072953;
             color: #ffffff;
@@ -486,89 +332,96 @@
         .info-container {
             max-width: 1200px;
             margin: 0 auto;
-            display: table;
-            width: 100%;
-        }
-
-        .info-col {
-            display: table-cell;
-            width: 33.333%;
-            vertical-align: middle;
-            padding: 0 15px;
-        }
-
-        .info-item {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
         }
+
+        .info-col { flex: 1; min-width: 250px; }
+
+        .info-item { display: flex; align-items: center; gap: 15px; }
 
         .info-icon-circle {
-            width: 54px;
-            height: 54px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255,255,255,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #8ce68c;
-            flex-shrink: 0;
         }
 
-        .info-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #a0b2c6;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
-        }
+        .info-label { font-size: 11px; color: #a0b2c6; text-transform: uppercase; }
+        .info-val { font-size: 15px; font-weight: 600; }
+        .info-val a { color: #ffffff; text-decoration: none; }
 
-        .info-val {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .info-val a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        /* Footer Inferior */
         .sub-footer {
             background-color: #051c38;
             color: #a0b2c6;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .sub-footer span {
-            color: #8ce68c;
-            font-weight: 600;
+            font-size: 13px;
         }
 
-        /* Adaptabilidad Móvil (Responsive) */
+        /* VSL Video Mockup Area */
+        .hero-visual {
+            display: table-cell;
+            width: 45%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .video-mockup {
+            background-color: #000;
+            border-radius: 8px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border: 4px solid #ffffff;
+        }
+
+        .video-mockup iframe, .video-mockup .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .video-placeholder {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 68px;
+            height: 68px;
+            background-color: #bf2600;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px rgba(191,38,0,0.6);
+            transition: transform 0.2s;
+        }
+
+        .video-placeholder:hover .play-button {
+            transform: scale(1.1);
+        }
+
         @media (max-width: 768px) {
-            .hero-content, .hero-visual, .features-grid, .feature-card, .cases-grid, .case-card, .info-col {
-                display: block !important;
-                width: 100% !important;
-                padding-right: 0 !important;
-                margin-bottom: 30px;
-            }
-            .urgency-banner {
-                display: block !important;
-                text-align: center;
-            }
-            .urgency-icon {
-                display: block !important;
-                width: 100% !important;
-                margin-bottom: 15px;
-            }
-            .info-col {
-                margin-bottom: 20px;
-            }
+            .hero-container { display: block; }
+            .hero-content, .hero-visual { display: block; width: 100%; padding-right: 0; margin-bottom: 30px; }
         }
     </style>
 </head>
@@ -578,13 +431,11 @@
 
     <header>
         <div class="logo-container">
-            <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none">
                 <circle cx="22" cy="18" r="6" fill="#072953"/>
                 <circle cx="42" cy="18" r="6" fill="#239a3b"/>
-                <path d="M12 44C12 34 20 32 22 32C24 32 30 36 32 38C34 36 40 32 42 32C44 32 52 34 52 44V50H12V44Z" fill="#072953" opacity="0.15"/>
                 <path d="M14 46C14 38.5 19.5 35 24 35C26.5 35 30.5 37.5 32 39" stroke="#072953" stroke-width="4" stroke-linecap="round"/>
                 <path d="M50 46C50 38.5 44.5 35 40 35C37.5 35 33.5 37.5 32 39" stroke="#239a3b" stroke-width="4" stroke-linecap="round"/>
-                <path d="M26 44H38" stroke="#239a3b" stroke-width="4" stroke-linecap="round"/>
             </svg>
             <div class="brand-text">
                 <span class="brand-sub">Centro de</span>
@@ -596,175 +447,153 @@
 
     <section class="hero">
         <div class="hero-container">
-            
             <div class="hero-content">
-                <span class="hero-badge">Soluciones Legales Extrajudiciales</span>
-                <h1>RECTIFICACIÓN <br><span>DE ÁREAS</span></h1>
+                <span class="hero-badge-alert">⚠️ Alerta del Poder Judicial</span>
+                <h1>¿Pensando en demandar? <br><span>Un juicio en Perú puede arruinarte por años</span></h1>
                 
                 <p class="hero-p">
-                    ¿Necesitas corregir o regularizar las medidas de tu propiedad? Te ayudamos a corregir diferencias en las medidas y áreas de tu inmueble de manera rápida, segura y sin juicios largos.
+                    No te dejes arrastrar a un laberinto legal sin fin. Ya sea por deudas, divorcios, propiedades o contratos, hay una vía legal inmediata y definitiva.
                 </p>
 
-                <div class="hero-cta-box">
-                    CONCILIAMOS PARA QUE OBTENGAS LA RECTIFICACIÓN DE ÁREAS CON <span>SEGURIDAD JURÍDICA Y RESPALDO LEGAL.</span>
+                <div class="data-strip">
+                    <strong>📊 Dato Real:</strong> Un litigio civil o familiar promedio toma de <strong>2 a 5 años</strong> y consume hasta el 40% del valor en disputa en honorarios.
                 </div>
 
                 <a href="https://wa.me/51990145511" class="btn-whatsapp" target="_blank">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.805-9.799.002-2.618-1.013-5.08-2.86-6.93C16.371 2.025 13.91 1.01 11.29 1.01c-5.405 0-9.807 4.403-9.809 9.806-.001 1.516.405 3.01 1.176 4.343l-.995 3.633 3.725-.977zm14.073-8.088c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
-                    </svg>
-                    Iniciar Conciliación Aquí
+                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.805-9.799.002-2.618-1.013-5.08-2.86-6.93C16.371 2.025 13.91 1.01 11.29 1.01c-5.405 0-9.807 4.403-9.809 9.806-.001 1.516.405 3.01 1.176 4.343l-.995 3.633 3.725-.977zm14.073-8.088c-.297-.15-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Quiero Solucionar Esto Ahora
                 </a>
             </div>
 
             <div class="hero-visual">
-                <div class="circle-seal">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 2a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2zm0 7c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4z"/>
-                    </svg>
-                    <span class="seal-txt1">Tus Derechos</span>
-                    <span class="seal-txt2">Merecen Respuesta</span>
+                <div class="video-mockup">
+                    <div class="video-placeholder" onclick="alert('Aquí se reproduciría tu video VSL explicativo corporativo.')">
+                        <div class="play-button">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <span style="font-weight: bold; font-size: 14px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">VER VIDEO: Cómo evitar ir a juicio</span>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="blueprint-card">
-                    <div class="blueprint-header">
-                        <span>Plano de Propiedad</span>
-                        <span style="color: #239a3b;">● En Regla</span>
-                    </div>
-                    <div class="area-display">
-                        120.00 m²
-                    </div>
-                    <div class="extrajudicial-badge">
-                        CONCILIACIÓN EXTRAJUDICIAL<br>
-                        <span style="font-weight: 400; font-size: 11px;">Rápida, Segura y con Valor Legal</span>
-                    </div>
+    <section class="agitation-section">
+        <h2 class="vsl-heading">Consecuencias invisibles de no resolver tu conflicto hoy</h2>
+        <div class="pain-points">
+            <div class="pain-card">
+                <h3>❌ Cuentas y Bienes Congelados</h3>
+                <p>Las deudas impagas o los problemas de herencia terminan con medidas cautelares que bloquean tu patrimonio familiar o empresarial.</p>
+            </div>
+            <div class="pain-card">
+                <h3>❌ Desgaste Emocional Permanente</h3>
+                <p>Las disputas de divorcio, tenencia o linderos con vecinos destruyen tu tranquilidad y la de tus seres queridos día tras día.</p>
+            </div>
+            <div class="pain-card">
+                <h3>❌ Pérdida de Oportunidades</h3>
+                <p>Una propiedad mal registrada o un contrato comercial en disputa te impiden vender, pedir préstamos o cerrar nuevos negocios.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section">
+        <h2 class="vsl-heading">La Salida Legal Inmediata: Qué Resolvemos</h2>
+        <div class="solution-grid">
+            
+            <div class="solution-card">
+                <h4>Familia y Matrimonial</h4>
+                <ul>
+                    <li>Pensión de Alimentos equitativa</li>
+                    <li>Régimen de Visitas y Tenencia</li>
+                    <li>Liquidación de bienes gananciales</li>
+                </ul>
+            </div>
+
+            <div class="solution-card">
+                <h4>Acuerdos de Negocios</h4>
+                <ul>
+                    <li>Cobro definitivo de deudas y pagarés</li>
+                    <li>Incumplimiento de contratos</li>
+                    <li>Conflictos entre socios o marcas</li>
+                </ul>
+            </div>
+
+            <div class="solution-card">
+                <h4>Inmuebles y Vivienda</h4>
+                <ul>
+                    <li>Rectificación de áreas y linderos</li>
+                    <li>Desalojos rápidos extrajudiciales</li>
+                    <li>Otorgamiento de Escrituras</li>
+                </ul>
+            </div>
+
+            <div class="solution-card">
+                <h4>Obligaciones Civiles</h4>
+                <ul>
+                    <li>Indemnizaciones por daños</li>
+                    <li>División y Partición de herencias</li>
+                    <li>Incumplimiento de pagos generales</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="objections-section">
+        <h2 class="vsl-heading">Derribando miedos: Casos resueltos en tiempo récord</h2>
+        <div class="cases-grid">
+            
+            <div class="case-card">
+                <span class="case-tag">Objeción: "Él no va a querer pagar"</span>
+                <h4>Caso de Alimentos Exitoso</h4>
+                <p>Un acuerdo informal de palabra falló por meses, dejando desprotegidos a los menores.</p>
+                <div class="case-solution">
+                    <strong>Resultado:</strong> Citamos formalmente a ambas partes y firmamos un Acta con fuerza de ley. Si incumple, va directo a sanción judicial sin pasar por un juicio previo.
+                </div>
+            </div>
+
+            <div class="case-card">
+                <span class="case-tag">Objeción: "Me va a costar una fortuna"</span>
+                <h4>Caso Comercial Corporativo</h4>
+                <p>Un proveedor no podía cobrar una factura de S/. 25,000 por temor al costo de los abogados.</p>
+                <div class="case-solution">
+                    <strong>Resultado:</strong> En una sola sesión se acordó un cronograma de pagos inmediato por una fracción mínima de lo que costaría un litigio.
+                </div>
+            </div>
+
+            <div class="case-card">
+                <span class="case-tag">Objeción: "Los vecinos se opondrán"</span>
+                <h4>Saneamiento de Propiedad</h4>
+                <p>Las medidas del terreno no coincidían con SUNARP y arriesgaban la venta de la casa.</p>
+                <div class="case-solution">
+                    <strong>Resultado:</strong> Se invitó a los colindantes en un espacio neutral pacífico, se firmaron las conformidades de linderos y se inscribió el predio con éxito.
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="features">
-        <h2 class="section-title">Beneficios de la Conciliación</h2>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon-box f-blue">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                </div>
-                <h3>Acuerdos Válidos y Legales</h3>
-                <p>Logramos acuerdos con total valor legal (equivalente a una sentencia de juez) para la rectificación de áreas y linderos de tu inmueble.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-box f-green">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                </div>
-                <h3>Ahorra Tiempo y Dinero</h3>
-                <p>Evita por completo los procesos judiciales largos, costosos y estresantes. Resolvemos los desacuerdos en un ambiente pacífico y ágil.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-box f-orange">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                </div>
-                <h3>Seguridad Jurídica</h3>
-                <p>Obtén total tranquilidad y certeza sobre las medidas reales y definitivas de tu propiedad ante Registros Públicos.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cases-section">
-        <div class="cases-container">
-            <h2 class="section-title">Casos Frecuentes que Resolvemos</h2>
-            <div class="cases-grid">
-                
-                <div class="case-card">
-                    <span class="case-tag">Caso 1</span>
-                    <h4>Discrepancia con SUNARP</h4>
-                    <p>El propietario detecta que el área física real de su terreno mide 120 m², pero en su partida registral figura erróneamente con 112 m².</p>
-                    <div class="case-solution">
-                        <strong>Solución:</strong> Se convoca a los colindantes a conciliar, firmando un Acta con valor legal que permite inscribir el área real directamente en Registros Públicos.
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <span class="case-tag">Caso 2</span>
-                    <h4>Compraventa Paralizada</h4>
-                    <p>Un banco rechaza el crédito hipotecario de un comprador porque los planos actuales del inmueble no coinciden con la escritura antigua.</p>
-                    <div class="case-solution">
-                        <strong>Solución:</strong> Mediante un proceso de conciliación rápido, se formaliza la rectificación métrica en días, salvando la venta de la propiedad sin ir a juicio.
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <span class="case-tag">Caso 3</span>
-                    <h4>Superposición de Linderos</h4>
-                    <p>Dos vecinos tienen dudas sobre la ubicación exacta de la pared divisoria (linderos) tras una remodelación.</p>
-                    <div class="case-solution">
-                        <strong>Solución:</strong> Un perito delimita las áreas y, a través del diálogo en nuestro centro, los vecinos firman un acuerdo definitivo mutuo y amigable.
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="considerations-section">
-        <div class="considerations-box">
-            <h3>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#072953" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-                Consideraciones Importantes antes de Iniciar
-            </h3>
-            <ul class="considerations-list">
-                <li><strong>Informe Técnico Técnico-Catastral:</strong> Es altamente recomendable contar con el levantamiento topográfico o planos visados por un ingeniero geógrafo o verificador SUNARP antes de la audiencia.</li>
-                <li><strong>Disposición de los Vecinos:</strong> La vía conciliatoria funciona cuando los propietarios colindantes están dispuestos a firmar de mutuo acuerdo. Si hay oposición absoluta, se tendrá que derivar a la vía judicial.</li>
-                <li><strong>Efecto de Sentencia:</strong> El Acta de Conciliación con Acuerdo Total es un título ejecutivo. Esto significa que lo acordado es de obligatorio cumplimiento inmediato para ambas partes.</li>
-                <li><strong>Aptitud del Inmueble:</strong> Este procedimiento aplica tanto para predios urbanos como rurales que necesiten saneamiento de medidas perimétricas.</li>
+    <section style="padding: 0 5%;">
+        <div class="guarantee-box">
+            <h3>🛡️ Tu proceso bajo Respaldo y Garantía Legal</h3>
+            <p style="margin-bottom: 15px; color: #555;">No estás probando suerte. Estás utilizando la herramienta de resolución más sólida respaldada por el Ministerio de Justicia del Perú:</p>
+            <ul class="guarantee-list">
+                <li><strong>Mismo Valor que una Sentencia:</strong> El Acta firmada obliga a ambas partes. Su incumplimiento permite ejecución judicial directa.</li>
+                <li><strong>Confidencialidad Absoluta:</strong> Todo lo tratado se mantiene bajo estricto secreto profesional, protegiendo tu reputación y tu negocio.</li>
+                <li><strong>Ahorro Garantizado:</strong> El 90% de los casos exitosos se cierran en la primera o segunda sesión, ahorrándote miles de soles.</li>
             </ul>
         </div>
     </section>
-
-    <div style="padding: 0 5%;">
-        <div class="urgency-banner">
-            <div class="urgency-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-            </div>
-            <div class="urgency-text">
-                ¡CONCILIA HOY Y EVITA COMPLICACIONES MAÑANA!
-            </div>
-        </div>
-    </div>
 
     <section class="info-bar">
         <div class="info-container">
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
                     <div>
-                        <div class="info-label">Llámanos o escribe</div>
+                        <div class="info-label">Separa tu Audiencia</div>
                         <div class="info-val"><a href="tel:990145511">990145511</a></div>
                     </div>
                 </div>
@@ -773,13 +602,10 @@
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
                     <div>
-                        <div class="info-label">Visítanos en</div>
+                        <div class="info-label">Sede Pueblo Libre</div>
                         <div class="info-val">Av. Mariano H. Cornejo 1566</div>
                     </div>
                 </div>
@@ -788,14 +614,11 @@
             <div class="info-col">
                 <div class="info-item">
                     <div class="info-icon-circle">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                            <line x1="4" y1="22" x2="4" y2="15"></line>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
                     </div>
                     <div>
-                        <div class="info-label">Ubicación de Referencia</div>
-                        <div class="info-val" style="font-size: 14px; color: #e6f4ea;">A 5 cuadras de la Plaza de la Bandera</div>
+                        <div class="info-label">Referencia</div>
+                        <div class="info-val">A 5 cdras de la Plaza de la Bandera</div>
                     </div>
                 </div>
             </div>
@@ -803,7 +626,7 @@
     </section>
 
     <footer class="sub-footer">
-        CONCILIACIÓN EFECTIVA, <span>ACUERDOS QUE GENERAN SOLUCIONES</span> • Centro de Conciliación Pueblo Libre
+        CONCILIACIÓN EXTRAJUDICIAL • ACUERDOS EFECTIVOS CON RESPALDO DEL MINJUSDH
     </footer>
 
 </body>
